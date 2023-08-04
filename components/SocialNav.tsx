@@ -1,6 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import {
+  YouTubeIcon,
+  GitHubIcon,
+  TwitterIcon,
+  LinkedInIcon,
+} from '@public/assets/social/index';
 
 const SocialNav = () => {
   return (
@@ -8,42 +13,22 @@ const SocialNav = () => {
       <ul className='social-icons flex gap-3'>
         <li>
           <Link href=''>
-            <Image
-              src='assets/social/youtube_icon.svg'
-              width={25}
-              height={25}
-              alt='youtube'
-            />
+            <YouTubeIcon className='svg' />
           </Link>
         </li>
         <li>
           <Link href=''>
-            <Image
-              src='assets/social/github_icon.svg'
-              width={25}
-              height={25}
-              alt='github'
-            />
+            <GitHubIcon className='svg' />
           </Link>
         </li>
         <li>
           <Link href=''>
-            <Image
-              src='assets/social/twitter_icon.svg'
-              width={25}
-              height={25}
-              alt='twitter'
-            />
+            <TwitterIcon className='svg' />
           </Link>
         </li>
         <li>
           <Link href=''>
-            <Image
-              src='assets/social/linkedin_icon.svg'
-              width={25}
-              height={25}
-              alt='linkedin'
-            />
+            <LinkedInIcon className='svg' />
           </Link>
         </li>
       </ul>

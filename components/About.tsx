@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import SocialNav from './SocialNav';
+import { InfoIcon } from '@public/assets/social/index';
 
 const About = () => {
   return (
@@ -45,12 +46,7 @@ const About = () => {
         </div>
         <div className='flex items-center gap-3'>
           <button className='btn border'>
-            <Image
-              src='assets/social/info_icon.svg'
-              width={25}
-              height={25}
-              alt='resume'
-            />
+            <InfoIcon className='svg' />
             Resume
           </button>
           <SocialNav />

@@ -31,8 +31,8 @@ header {
   @apply pt-12;
 }
 
-.head_text {
-  @apply text-2xl font-bold;
+.svg {
+  @apply text-2xl fill-black hover:fill-blue-400 hover:translate-y-[-15%] hover:scale-125 transition-all;
 }
 
 .heading-2 {
@@ -40,7 +40,7 @@ header {
 }
 
 .btn {
-  @apply flex gap-1 font-mono px-3 py-2 rounded-sm;
+  @apply flex gap-1 font-mono px-3 py-2 rounded-sm hover:scale-110 transition-all;
 }
 
 .info-block {
