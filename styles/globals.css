@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+section,
+header {
+  @apply pt-12;
+}
+
+.head_text {
+  @apply text-2xl font-bold;
+}
+
+.heading-2 {
+  @apply text-2xl text-blue-800 mb-5;
+}
+
+.btn {
+  @apply flex gap-1 font-mono px-3 py-2 rounded-sm;
+}
+
+.info-block {
+  @apply flex flex-col gap-5;
+}
+
+.info-block > .info {
+  @apply h-16;
+}
+
+.info-block > .info > :first-child {
+  @apply font-bold;
+}
+
+.info-block > .info > :nth-child(2) {
+  @apply font-light;
+}
+
+.skill-categories > * {
+  @apply p-3 border text-center rounded-md;
+}
+
+.skill-items > * {
+  @apply p-3 border text-center;
+}
+
+.text-field {
+  @apply border rounded-md p-2 ps-1;
+}
