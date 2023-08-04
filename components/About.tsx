@@ -44,8 +44,9 @@ const About = () => {
             </div>
           </div>
         </div>
+        <hr className='mt-2 mb-3 h-0.5 bg-slate-900' />
         <div className='flex items-center gap-3'>
-          <button className='btn border'>
+          <button className='btn border border-gray-900'>
             <InfoIcon className='svg' />
             Resume
           </button>

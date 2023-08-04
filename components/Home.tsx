@@ -25,9 +25,7 @@ const Home = () => {
         <SocialNav />
         <div className='flex mt-5'>
           <button className='btn bg-blue-700 text-white'>Hire Me</button>
-          <button className='px-3 py-2 font-mono'>
-            &#x2192; View my portfolio
-          </button>
+          <button className=' btn font-mono'>&#x2192; View my portfolio</button>
         </div>
       </div>
       {/* Add Image */}

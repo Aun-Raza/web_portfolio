@@ -1,0 +1,9 @@
+export { default as HTML } from './html_icon.svg';
+export { default as CSS } from './css_icon.svg';
+export { default as JavaScript } from './js_icon.svg';
+export { default as React } from './react_icon.svg';
+export { default as NextJS } from './nextjs_icon.svg';
+export { default as Jest } from './jest-icon.svg';
+export { default as DB } from './db_icon.svg';
+export { default as TypeScript } from './ts_icon.svg';
+export { default as GraphQL } from './graphql-icon.svg';

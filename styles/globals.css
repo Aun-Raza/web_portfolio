@@ -59,14 +59,6 @@ header {
   @apply font-light;
 }
 
-.skill-categories > * {
-  @apply p-3 border text-center rounded-md;
-}
-
-.skill-items > * {
-  @apply p-3 border text-center;
-}
-
-.text-field {
-  @apply border rounded-md p-2 ps-1;
+.skill_item {
+  @apply btn cursor-pointer flex items-center gap-3 border-2 border-gray-300 rounded-lg p-3;
 }
