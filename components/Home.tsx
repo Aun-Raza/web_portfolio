@@ -5,7 +5,9 @@ const oxanium = Oxanium({ subsets: ['latin'] });
 
 const Home = () => {
   return (
-    <header className={'flex ' + oxanium.className}>
+    <header
+      className={'md:flex h-screen container mx-auto ' + oxanium.className}
+    >
       <div className='w-2/3'>
         <p className='text-4xl'>
           Hello, I&apos;m

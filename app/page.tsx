@@ -6,7 +6,7 @@ import Skills from '@components/Skills';
 
 export default function Home() {
   return (
-    <main className='container mx-auto'>
+    <main>
       <Homepage />
       <About />
       <Skills />
