@@ -7,7 +7,7 @@ const Footer = () => {
     <footer
       className={'bg-gray-900 text-white mt-3 py-2 flex ' + oxanium.className}
     >
-      <p className='container text-right p-3'>
+      <p className='container text-center sm:text-right p-3'>
         ©2023 Aun Raza. All rights reserved
       </p>
     </footer>

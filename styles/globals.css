@@ -16,6 +16,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -55,7 +59,7 @@ section {
 }
 
 .svg {
-  @apply text-2xl fill-black hover:fill-blue-400 hover:translate-y-[-15%] hover:scale-125 transition-all;
+  @apply text-4xl md:text-2xl fill-black hover:fill-blue-400 hover:translate-y-[-15%] hover:scale-125 transition-all;
 }
 
 .heading-2 {
@@ -63,7 +67,7 @@ section {
 }
 
 .heading-3 {
-  @apply font-semibold text-blue-700 text-xl mb-2;
+  @apply font-semibold text-blue-700 text-xl mb-2 flex items-center gap-1;
 }
 
 .center {
@@ -75,7 +79,7 @@ section {
 }
 
 .info-block {
-  @apply flex flex-col gap-5;
+  @apply flex flex-col gap-8 sm:gap-5;
 }
 
 .info-block > .info {

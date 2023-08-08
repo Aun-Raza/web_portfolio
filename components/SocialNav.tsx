@@ -12,22 +12,22 @@ const SocialNav = () => {
     <nav>
       <ul className='social-icons flex gap-3'>
         <li>
-          <Link href=''>
+          <Link href='' className='text-lg'>
             <YouTubeIcon className='svg' />
           </Link>
         </li>
         <li>
-          <Link href=''>
+          <Link target='_blank' href='https://github.com/Aun-Raza'>
             <GitHubIcon className='svg' />
           </Link>
         </li>
         <li>
-          <Link href=''>
+          <Link target='_blank' href='https://twitter.com/AunRaza1523417'>
             <TwitterIcon className='svg' />
           </Link>
         </li>
         <li>
-          <Link href=''>
+          <Link target='_blank' href='https://www.linkedin.com/in/aun--raza/'>
             <LinkedInIcon className='svg' />
           </Link>
         </li>

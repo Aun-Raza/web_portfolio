@@ -8,8 +8,10 @@ export default function Home() {
   return (
     <main>
       <Homepage />
-      <About />
-      <Skills />
+      <div className='md:flex justify-evenly items-stretch '>
+        <About />
+        <Skills />
+      </div>
       <Portfolio />
       <Contact />
     </main>

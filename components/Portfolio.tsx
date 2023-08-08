@@ -62,7 +62,7 @@ const Portfolio = () => {
 
   function getTechnologyStack(id: number, technologies: string[]) {
     return (
-      <div className='flex gap-2 flex-wrap'>
+      <div className='flex justify-center md:justify-start gap-2 flex-wrap'>
         {technologies.map((tech) => (
           <div key={tech + id} className='btn border border-gray-400'>
             {tech}
@@ -73,7 +73,7 @@ const Portfolio = () => {
   }
 
   return (
-    <section>
+    <section id='portfolio'>
       <h2 className='heading-2 center'>
         <ArrowIcon className='inline fill-blue-900' /> Portfolio{' '}
         <ArrowIcon className='inline fill-blue-900 rotate-180' />
@@ -83,9 +83,9 @@ const Portfolio = () => {
           ({ id, title, file, technology, desc, links: { github, demo } }) => (
             <div
               key={id}
-              className='flex gap-2 w-11/12 mx-auto border shadow-lg bg-white hover:scale-105 transition-all rounded-md cursor-pointer p-2'
+              className='flex flex-col-reverse md:flex-row items-stretch gap-2 md:w-11/12 w-full mx-auto border shadow-lg bg-white hover:scale-105 transition-all md:rounded-md cursor-pointer p-2'
             >
-              <div className='w-1/2 flex items-center'>
+              <div className='md:w-1/2 flex-grow flex items-center'>
                 <Image
                   src={`/assets/projects/${file}`}
                   width={250}
@@ -94,12 +94,18 @@ const Portfolio = () => {
                   className='w-full rounded-md shadow-lg'
                 />
               </div>
-              <div className='w-1/2 flex flex-col'>
-                <h3 className='heading-3 mt-2'>{title}</h3>
+              <div className='md:w-1/2 flex-grow flex flex-col'>
+                <h3 className='heading-3 mt-2 mx-auto md:w-full'>
+                  <ArrowIcon className='inline fill-blue-600' />
+                  {title}
+                  <ArrowIcon className='inline fill-blue-600 -rotate-180 md:hidden' />
+                </h3>
                 <div className='flex-grow'>
-                  <p className=''>{desc}</p>
+                  <p className='text-center md:text-left'>{desc}</p>
                   <p className='mt-2'>
-                    <span className='text-blue-600 font-bold'>Technology</span>{' '}
+                    <span className='text-blue-600 block font-bold w-fit md:w-full mx-auto mb-2'>
+                      Technology
+                    </span>{' '}
                     {getTechnologyStack(id, technology)}
                   </p>
                 </div>

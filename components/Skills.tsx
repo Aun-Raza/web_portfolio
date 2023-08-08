@@ -16,14 +16,17 @@ import { Arrow as ArrowIcon } from '@public/assets/index';
 
 const Skills = () => {
   return (
-    <section className='bg-white pt-0'>
+    <section id='skills' className='bg-white md:w-1/2 pt-0 md:py-24 flex-grow'>
       <div className='container mx-auto'>
         <h2 className='heading-2 center'>
           <ArrowIcon className='inline fill-blue-900' /> Technical Skills{' '}
-          <ArrowIcon className='inline fill-blue-900 rotate-180' />
+          <ArrowIcon className='inline fill-blue-900 rotate-180 md:hidden' />
         </h2>
         <div
-          className={'flex flex-wrap justify-center gap-2 ' + oxanium.className}
+          className={
+            'flex flex-wrap 2xl:w-1/2 mx-auto justify-center gap-2 ' +
+            oxanium.className
+          }
         >
           <div className='skill_item'>
             <HTML className='text-4xl' />
