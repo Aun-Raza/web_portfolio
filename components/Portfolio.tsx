@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Arrow as ArrowIcon, ExternalLink } from '@public/assets/index';
-import { GitHubIcon } from '@public/assets/social';
+import { Arrow as ArrowIcon } from '@public/assets/index';
 import {
   Card,
   CardHeader,
@@ -10,7 +9,6 @@ import {
   CardFooter,
   Divider,
   Link,
-  Image as ImageUI,
 } from '@nextui-org/react';
 
 import Image from 'next/image';
@@ -20,8 +18,7 @@ const Portfolio = () => {
     id: number;
     title: string;
     technology: string[];
-    file: string;
-    logo: string;
+    file: { name: string; logo: string };
     links: { github: string; demo: string };
     desc: string;
   };
@@ -39,8 +36,10 @@ const Portfolio = () => {
         'DayJS',
         'ChartJS',
       ],
-      file: 'habit_tracker.png',
-      logo: 'square.png',
+      file: {
+        name: 'habit_tracker.jpg',
+        logo: 'square.png',
+      },
       links: {
         github: 'https://github.com/Aun-Raza/PixelHabitTracker',
         demo: 'https://pixeltracker-7vq3.onrender.com',
@@ -59,8 +58,10 @@ const Portfolio = () => {
         'TypeScript',
         'Jest',
       ],
-      file: 'quiz.png',
-      logo: 'js_icon.svg',
+      file: {
+        name: 'jsquiz.jpg',
+        logo: 'js_icon.svg',
+      },
       links: {
         github: 'https://github.com/Aun-Raza/Geo-Quiz',
         demo: 'https://js-quiz-q607.onrender.com',
@@ -78,8 +79,10 @@ const Portfolio = () => {
         'TypeScript',
         'WebSocket',
       ],
-      file: 'chat.png',
-      logo: 'ui.png',
+      file: {
+        name: 'chat.jpg',
+        logo: 'ui.png',
+      },
       links: { github: 'https://github.com/Aun-Raza/ChatSphere', demo: '' },
       desc: 'Constructed a secure chat application ensuring user privacy through encrypted messages.',
     },
@@ -108,21 +111,13 @@ const Portfolio = () => {
       </h2>
       <div className='flex flex-wrap justify-center gap-3 mx-auto'>
         {projects.map(
-          ({
-            id,
-            title,
-            file,
-            logo,
-            technology,
-            desc,
-            links: { github, demo },
-          }) => (
+          ({ id, title, file, technology, desc, links: { github, demo } }) => (
             <Card key={id} className='max-w-[400px] -z-0'>
               <CardHeader className='flex gap-3'>
                 <Image
                   alt='nextui logo'
                   height={40}
-                  src={`/assets/projects/${logo}`}
+                  src={`/assets/projects/${file.logo}`}
                   width={40}
                   className='rounded-sm'
                 />
@@ -135,13 +130,13 @@ const Portfolio = () => {
               </CardHeader>
               <Divider />
               <CardBody className='flex flex-col'>
-                <p className='h-auto sm:h-32'>{desc}</p>
+                <p className='h-auto mb-2 sm:mb-0 sm:h-32'>{desc}</p>
                 {getTechnologyStack(id, technology)}
                 <Link isExternal href={demo}>
                   <Image
-                    src={`/assets/projects/${file}`}
-                    width={200}
-                    height={200}
+                    src={`/assets/projects/${file.name}`}
+                    width={3840}
+                    height={2043}
                     alt={`${title} image`}
                     className='w-full object-cover rounded-xl border border-gray-400 grow mt-3 cursor-pointer'
                   />
@@ -162,39 +157,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
-{
-  /* <div className='md:w-1/2 flex-grow flex items-center'>
-<Image
-  src={`/assets/projects/${file}`}
-  width={250}
-  height={250}
-  alt={`${title} image`}
-  className='w-full rounded-md shadow-lg object-contain'
-/>
-</div>
-<div className='md:w-1/2 flex-grow flex flex-col'>
-<h3 className='heading-3 mt-2 mx-auto md:w-full'>
-  <ArrowIcon className='inline fill-blue-600' />
-  {title}
-  <ArrowIcon className='inline fill-blue-600 -rotate-180 md:hidden' />
-</h3>
-<div className='flex-grow'>
-  <p className='text-center md:text-left'>{desc}</p>
-  <p className='mt-2'>
-    <span className='text-blue-600 block font-bold w-fit md:w-full mx-auto mb-2'>
-      Technology
-    </span>{' '}
-    {getTechnologyStack(id, technology)}
-  </p>
-</div>
-<div className='flex justify-center gap-2 py-2'>
-  <Link target='_blank' href={github} className='btn'>
-    <GitHubIcon /> Code
-  </Link>
-  <Link target='_blank' href={demo} className='btn'>
-    <ExternalLink /> Live Demo
-  </Link>
-</div>
-</div> */
-}
