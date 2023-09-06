@@ -42,7 +42,7 @@ section {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
     linear-gradient(#fff, #fff);
-  background-size: 0 1px;
+  background-size: 0 2px;
   background-position: 0 105%;
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-in-out;
@@ -54,7 +54,7 @@ section {
 }
 
 .link-underline:hover {
-  background-size: 100% 1px;
+  background-size: 100% 2px;
   background-position: 0 105%;
 }
 
