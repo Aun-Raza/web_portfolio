@@ -9,7 +9,7 @@ const NavBar = () => {
   const [toggleMobileNav, setToggleMobileNav] = useState(false);
 
   return (
-    <nav className='sticky bg-white top-0 shadow-lg py-3 px-5 z-10'>
+    <nav className='text-inherit sm:text-xl sticky bg-white top-0 shadow-lg py-3 px-5 z-10'>
       <div className='flex items-center justify-between '>
         <Link href='#home' className='btn'>
           <div className='flex gap-2 items-center'>

@@ -3,6 +3,7 @@
 import React from 'react';
 import { Arrow as ArrowIcon } from '@public/assets/index';
 import { GoogleMap, useLoadScript } from '@react-google-maps/api';
+import { Input, Textarea } from '@nextui-org/react';
 
 const Contact = () => {
   const { isLoaded } = useLoadScript({
@@ -31,41 +32,42 @@ const Contact = () => {
           )}
         </div>
         <div className='md:w-3/5'>
-          <h3 className='heading-3 center'>
-            {' '}
-            <ArrowIcon className='inline fill-blue-600' />
-            Message Me
-            <ArrowIcon className='inline fill-blue-600 rotate-180 md:hidden' />
-          </h3>
+          <h3 className='heading-3 center'>Contact Me</h3>
           <form
             action='https://formspree.io/f/xwkjdqbd'
             method='POST'
-            className='rounded-md pt-1 p-3'
+            className='rounded-md pt-1 p-3 flex flex-col gap-2'
           >
-            <div className='flex flex-col sm:flex-row gap-3 '>
-              <input
+            <div className='flex flex-col sm:flex-row gap-3'>
+              <Input
+                id='name'
+                name='name'
+                label='Name'
                 type='text'
-                placeholder='#Your Name'
-                className='text_field sm:w-1/2'
+                placeholder='Enter your name'
+                className='sm:w-1/2'
                 required
               />
-              <input
-                type='text'
-                placeholder='#Your Email'
-                className='text_field sm:w-1/2'
+              <Input
+                id='email'
+                name='email'
+                label='Email'
+                type='email'
+                placeholder='Enter your email'
+                className='sm:w-1/2'
                 required
               />
             </div>
-            <textarea
-              name=''
-              id=''
-              placeholder='#Your Message'
-              className='text_field w-full h-28 mt-2'
+            <Textarea
+              id='message'
+              name='message'
+              label='Message'
+              placeholder='Enter your message'
               required
-            ></textarea>
+            />
             <button
               type='submit'
-              className='btn bg-blue-700 text-white mx-auto md:mx-1'
+              className='btn bg-blue-500 text-white flex justify-center'
             >
               Send
             </button>

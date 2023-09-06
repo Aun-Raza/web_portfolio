@@ -10,21 +10,24 @@ const Home = () => {
     <header
       id='home'
       className={
-        'px-0 md:px-3 md:flex h-screen container mx-auto ' + oxanium.className
+        'px-0 md:px-3 md:flex h-fit sm:h-screen container mx-auto ' +
+        oxanium.className
       }
     >
       <div className='w-2/3 mx-auto'>
-        <p className='text-3xl sm:text-4xl text-center sm:text-left'>
+        <p className='text-3xl sm:text-5xl lg:text-7xl text-center sm:text-left'>
           Hello, I&apos;m
           <br />
-          <span className='text-5xl sm:text-7xl'>
+          <span className='text-5xl sm:text-7xl lg:text-8xl'>
             Aun <span className='text-blue-700 font-bold'>Raza</span>
           </span>
           <br />A{' '}
-          <span className='font-semibold text-blue-900'>FULL-STACK</span> MERN
+          <span className='font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400'>
+            FULL-STACK MERN
+          </span>{' '}
           Developer
         </p>
-        <ul className='flex flex-wrap leading-4 justify-center items-center sm:justify-start gap-5 ps-3 list-disc w-fit text-xl mt-1 mb-4'>
+        <ul className='flex flex-wrap leading-4 justify-center items-center sm:justify-start gap-5 md:gap-8 ps-3 list-disc w-fit text-xl md:text-2xl mt-1 mb-4'>
           <li>Enthusiastic</li>
           <li>Committed</li>
           <li>Hardworking</li>
@@ -34,7 +37,7 @@ const Home = () => {
         </div>
         <div className='flex flex-wrap-reverse mt-5 justify-center sm:justify-start'>
           <Link href='#contact'>
-            <button className='btn bg-blue-700 text-white'>Hire Me</button>
+            <button className='btn bg-blue-500 text-white'>Hire Me</button>
           </Link>
           <Link href='#portfolio'>
             <button className=' btn font-mono'>
@@ -43,11 +46,10 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      {/* Add Image */}
       <div className='md:w-1/3'>
         <div className='mt-3 mx-auto rounded-md bg-gradient-to-b from-blue-300 to-blue-900 p-1 w-fit'>
           <Image
-            className='rounded-md'
+            className='rounded-md w-unit-9xl'
             src='/self.jpg'
             width={300}
             height={300}

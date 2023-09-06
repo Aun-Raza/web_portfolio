@@ -35,7 +35,7 @@ header {
 }
 
 section {
-  @apply py-24;
+  @apply py-12 md:py-24;
 }
 
 .link-underline {
@@ -63,11 +63,11 @@ section {
 }
 
 .heading-2 {
-  @apply font-semibold text-2xl text-blue-800 mb-5 flex items-center gap-1;
+  @apply font-semibold text-2xl sm:text-3xl lg:text-4xl text-blue-800 mb-5 flex items-center gap-1;
 }
 
 .heading-3 {
-  @apply font-semibold text-blue-700 text-xl mb-2 flex items-center gap-1;
+  @apply font-semibold text-blue-800 text-xl sm:text-2xl lg:text-3xl mb-2 flex items-center gap-1;
 }
 
 .center {
@@ -75,7 +75,7 @@ section {
 }
 
 .btn {
-  @apply flex items-center gap-1 font-mono px-3 py-2 rounded-sm hover:scale-110 transition-all;
+  @apply flex items-center gap-1 px-3 font-mono py-2 rounded-md hover:scale-110 transition-all;
 }
 
 .info-block {
@@ -83,7 +83,7 @@ section {
 }
 
 .info-block > .info {
-  @apply h-16;
+  @apply h-16 w-3/4 mx-auto sm:w-full;
 }
 
 .info-block > .info > :first-child {

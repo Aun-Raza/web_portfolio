@@ -16,7 +16,10 @@ import { Arrow as ArrowIcon } from '@public/assets/index';
 
 const Skills = () => {
   return (
-    <section id='skills' className='bg-white md:w-1/2 pt-0 md:py-24 flex-grow'>
+    <section
+      id='skills'
+      className='bg-white md:w-1/2 pt-0 md:py-24 2xl:py-36 flex-grow'
+    >
       <div className='container mx-auto'>
         <h2 className='heading-2 center'>
           <ArrowIcon className='inline fill-blue-900' /> Technical Skills{' '}

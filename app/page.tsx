@@ -3,6 +3,7 @@ import Contact from '@components/Contact';
 import Homepage from '@components/Home';
 import Portfolio from '@components/Portfolio';
 import Skills from '@components/Skills';
+import { Button } from '@nextui-org/button';
 
 export default function Home() {
   return (
