@@ -21,11 +21,7 @@ const SocialNav = () => {
             <GitHubIcon className='svg' />
           </Link>
         </li>
-        <li>
-          <Link target='_blank' href='https://twitter.com/AunRaza1523417'>
-            <TwitterIcon className='svg' />
-          </Link>
-        </li>
+
         <li>
           <Link target='_blank' href='https://www.linkedin.com/in/aun--raza/'>
             <LinkedInIcon className='svg' />

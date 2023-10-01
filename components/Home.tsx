@@ -50,7 +50,7 @@ const Home = () => {
         <div className='mt-3 mx-auto rounded-md bg-gradient-to-b from-blue-300 to-blue-900 p-1 w-fit'>
           <Image
             className='rounded-md w-unit-9xl'
-            src='/self.jpg'
+            src='/aunraza_portrait.png'
             width={300}
             height={300}
             alt='Aun Raza (me)'
