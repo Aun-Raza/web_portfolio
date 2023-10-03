@@ -44,7 +44,7 @@ const Portfolio = () => {
         github: 'https://github.com/Aun-Raza/PixelHabitTracker',
         demo: 'https://pixeltracker-7vq3.onrender.com',
       },
-      desc: 'Built an alternative gamified habit tracking application usingGraphQL stack. Pixel Habit Tracker encourages users to maintain their habit streaks through a rewarding points system.',
+      desc: 'Built an alternative gamified habit tracking application using GraphQL stack. Pixel Habit Tracker encourages users to maintain their habit streaks through a rewarding points system.',
     },
     {
       id: 2,

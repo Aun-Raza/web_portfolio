@@ -3,45 +3,58 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { BurgerIcon, XIcon } from '@public/assets';
+import { Home, About, Skill, Portfolio, Contact } from '@public/assets/nav';
 
 const NavBar = () => {
   const [toggleMobileNav, setToggleMobileNav] = useState(false);
 
   return (
-    <nav className='text-inherit sm:text-xl sticky bg-white top-0 shadow-lg py-3 px-5 z-10'>
+    <nav className='text-inherit sm:text-xl sticky bg-white top-0 shadow-lg py-6 px-5 z-10'>
       <div className='flex items-center justify-between '>
-        <ul className='flex gap-3 relative'>
+        <ul className='flex gap-4 relative'>
           <li className='hidden md:block'>
-            <Link href='#home' className='link-underline link-underline-black'>
+            <Link
+              href='#home'
+              className='hover:fill-blue-400 hover:text-blue-400 link-underline link-underline-black flex gap-2 items-center'
+            >
+              <Home />
               Home
             </Link>
           </li>
           <li className='hidden md:block'>
-            <Link href='#about' className='link-underline link-underline-black'>
+            <Link
+              href='#about'
+              className='hover:fill-blue-400 hover:text-blue-400 link-underline link-underline-black flex gap-2 items-center'
+            >
+              <About />
               About
             </Link>
           </li>
           <li className='hidden md:block'>
             <Link
               href='#skills'
-              className='link-underline link-underline-black'
+              className='hover:fill-blue-400 hover:text-blue-400 link-underline link-underline-black flex gap-2 items-center'
             >
+              <Skill />
               Skills
             </Link>
           </li>
           <li className='hidden md:block'>
             <Link
               href='#portfolio'
-              className='link-underline link-underline-black'
+              className='hover:fill-blue-400 hover:text-blue-400 link-underline link-underline-black flex gap-2 items-center'
             >
+              {' '}
+              <Portfolio />
               Portfolio
             </Link>
           </li>
           <li className='hidden md:block'>
             <Link
               href='#contact'
-              className='link-underline link-underline-black'
+              className='hover:fill-blue-400 hover:text-blue-400 link-underline link-underline-black flex gap-2 items-center'
             >
+              <Contact />
               Contact
             </Link>
           </li>
@@ -57,10 +70,8 @@ const NavBar = () => {
             />
           )}
         </ul>
-        <Link href='#home' className='btn'>
-          <h2 className='ms-2 hover:scale-125 transition-all cursor-pointer'>
-            aunraza.dev
-          </h2>
+        <Link href='#home'>
+          <h2 className='ms-2  cursor-pointer'>aunraza.dev</h2>
         </Link>
       </div>
       {/* Mobile Navigation */}
