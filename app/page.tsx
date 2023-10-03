@@ -22,6 +22,7 @@ export default function Home() {
           />
         </div>
       </div>
+      <Skills />
       <Portfolio />
       <Contact />
     </main>

@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { BurgerIcon, Stack, XIcon } from '@public/assets';
@@ -11,14 +10,6 @@ const NavBar = () => {
   return (
     <nav className='text-inherit sm:text-xl sticky bg-white top-0 shadow-lg py-3 px-5 z-10'>
       <div className='flex items-center justify-between '>
-        <Link href='#home' className='btn'>
-          <div className='flex gap-2 items-center'>
-            <Stack className='text-3xl' />
-            <h2 className='ms-2 hover:scale-125 transition-all cursor-pointer'>
-              Aun Raza
-            </h2>
-          </div>
-        </Link>
         <ul className='flex gap-3 relative'>
           <li className='hidden md:block'>
             <Link href='#home' className='link-underline link-underline-black'>
@@ -66,6 +57,14 @@ const NavBar = () => {
             />
           )}
         </ul>
+        <Link href='#home' className='btn'>
+          <div className='flex gap-2 items-center'>
+            <Stack className='text-3xl' />
+            <h2 className='ms-2 hover:scale-125 transition-all cursor-pointer'>
+              Aun Raza
+            </h2>
+          </div>
+        </Link>
       </div>
       {/* Mobile Navigation */}
       {toggleMobileNav && (

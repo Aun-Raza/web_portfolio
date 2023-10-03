@@ -7,3 +7,8 @@ export { default as Jest } from './jest-icon.svg';
 export { default as DB } from './db_icon.svg';
 export { default as TypeScript } from './ts_icon.svg';
 export { default as GraphQL } from './graphql-icon.svg';
+export { default as EsLint } from './eslint.svg';
+export { default as Express } from './express-js.svg';
+export { default as MySql } from './mysql_icon.svg';
+export { default as Node } from './node_icon.svg';
+export { default as Redux } from './redux_icon.svg';
