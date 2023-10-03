@@ -19,13 +19,14 @@ const About = () => {
           <p className='sm:text-left'>
             Beside programming, I love to read a lot of self-help books 📚
             because it gives me a stronger understanding about the world and
-            productivity. I also enjoy playing video games on the occasion. 🕹️
+            productivity. I also enjoy playing video games and running on the
+            occasion. 🕹️🏃‍♂️
           </p>
           <br />
           <p className='sm:text-left'>
             Here are the books that impacted my life:
           </p>
-          <ul className='sm:text-left my-4 leading-9'>
+          <ul className='text-left my-4 leading-9'>
             <li className='sm:ms-12'>⭐ Atomic Habits</li>
             <li className='sm:ms-12'>
               ⭐ How to Win Friends and Influence People
@@ -49,7 +50,7 @@ const About = () => {
                 </div>
                 <div className='info'>
                   <h3>Email</h3>
-                  <p>aunrazaq123@gmail.com</p>
+                  <p className='break-words'>aunrazaq123@gmail.com</p>
                 </div>
               </div>
               <div className='info-block'>
@@ -67,7 +68,7 @@ const About = () => {
               <Link target='_blank' href='/AunRaza-Resume-2023.pdf'>
                 <button className='btn'>
                   <InfoIcon className='svg' />
-                  <span className='hidden sm:block'>Download CV</span>
+                  <span className='hidden sm:block'>Resume</span>
                 </button>
               </Link>
               <SocialNav />

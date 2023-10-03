@@ -59,7 +59,7 @@ section {
 }
 
 .svg {
-  @apply text-4xl md:text-2xl fill-black hover:fill-blue-400 hover:translate-y-[-15%] hover:scale-125 transition-all;
+  @apply text-4xl md:text-2xl hover:fill-blue-400 hover:translate-y-[-15%] hover:scale-125 transition-all;
 }
 
 .heading-2 {

@@ -16,16 +16,19 @@ const Home = () => {
     >
       <div className='w-2/3 mx-auto'>
         <p className='text-3xl sm:text-5xl lg:text-7xl text-center sm:text-left'>
-          Hello, I&apos;m
+          Hello 👋
           <br />
           <span className='text-5xl sm:text-7xl lg:text-8xl'>
-            Aun <span className='text-blue-700 font-bold'>Raza</span>
+            I&apos;m{' '}
+            <span className='font-bold text-transparent bg-clip-text bg-gradient-to-l from-blue-700 to-blue-500'>
+              Aun Raza
+            </span>
           </span>
           <br />A{' '}
           <span className='font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400'>
             FULL-STACK MERN
           </span>{' '}
-          Developer
+          Developer 🧑‍💻
         </p>
         <ul className='flex flex-wrap leading-4 justify-center items-center sm:justify-start gap-5 md:gap-8 ps-3 list-disc w-fit text-xl md:text-2xl mt-1 mb-4'>
           <li>Enthusiastic</li>
@@ -47,12 +50,12 @@ const Home = () => {
         </div>
       </div>
       <div className='md:w-1/3'>
-        <div className='mt-3 mx-auto rounded-md bg-gradient-to-b from-blue-300 to-blue-900 p-1 w-fit'>
+        <div className='mt-3 mx-auto w-fit h-'>
           <Image
-            className='rounded-md w-unit-9xl'
+            className='rounded-md w-unit-8xl'
             src='/aunraza_portrait.png'
-            width={300}
-            height={300}
+            width={433}
+            height={577}
             alt='Aun Raza (me)'
           />
         </div>
