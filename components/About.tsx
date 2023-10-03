@@ -66,8 +66,8 @@ const About = () => {
             </div>
             <div className='flex items-center justify-center sm:justify-start md:gap-3'>
               <Link target='_blank' href='/AunRaza-Resume-2023.pdf'>
-                <button className='btn'>
-                  <InfoIcon className='svg' />
+                <button className='btn svg hover:text-blue-400'>
+                  <InfoIcon />
                   <span className='hidden sm:block'>Resume</span>
                 </button>
               </Link>

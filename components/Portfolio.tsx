@@ -70,21 +70,24 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: 'ChatSphere',
+      title: 'NoteDev',
       technology: [
+        'NextTS',
         'React',
-        'Node',
-        'Express',
-        'Mongoose',
+        'Prisma',
         'TypeScript',
-        'WebSocket',
+        'NextUI',
+        'Font-Awesome',
       ],
       file: {
-        name: 'chat.jpg',
-        logo: 'ui.png',
+        name: 'notedev.png',
+        logo: 'note_icon.svg',
       },
-      links: { github: 'https://github.com/Aun-Raza/ChatSphere', demo: '' },
-      desc: 'Constructed a secure chat application ensuring user privacy through encrypted messages.',
+      links: {
+        github: 'https://github.com/Aun-Raza/notedev',
+        demo: 'https://notedev-hazel.vercel.app/login',
+      },
+      desc: 'Developed a versatile note management application tailored for web development enthusiasts and individuals seeking a simplified user experience.',
     },
   ];
 
