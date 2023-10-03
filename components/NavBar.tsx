@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { BurgerIcon, Stack, XIcon } from '@public/assets';
+import { BurgerIcon, XIcon } from '@public/assets';
 
 const NavBar = () => {
   const [toggleMobileNav, setToggleMobileNav] = useState(false);
@@ -58,12 +58,9 @@ const NavBar = () => {
           )}
         </ul>
         <Link href='#home' className='btn'>
-          <div className='flex gap-2 items-center'>
-            <Stack className='text-3xl' />
-            <h2 className='ms-2 hover:scale-125 transition-all cursor-pointer'>
-              Aun Raza
-            </h2>
-          </div>
+          <h2 className='ms-2 hover:scale-125 transition-all cursor-pointer'>
+            aunraza.dev
+          </h2>
         </Link>
       </div>
       {/* Mobile Navigation */}
