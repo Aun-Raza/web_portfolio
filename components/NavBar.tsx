@@ -23,11 +23,12 @@ const NavBar = () => {
           </li>
           <li className='hidden md:block'>
             <Link
-              href='#about'
+              href='#portfolio'
               className='hover:fill-blue-400 hover:text-blue-400 link-underline link-underline-black flex gap-2 items-center'
             >
-              <About />
-              About
+              {' '}
+              <Portfolio />
+              Portfolio
             </Link>
           </li>
           <li className='hidden md:block'>
@@ -41,12 +42,11 @@ const NavBar = () => {
           </li>
           <li className='hidden md:block'>
             <Link
-              href='#portfolio'
+              href='#about'
               className='hover:fill-blue-400 hover:text-blue-400 link-underline link-underline-black flex gap-2 items-center'
             >
-              {' '}
-              <Portfolio />
-              Portfolio
+              <About />
+              About
             </Link>
           </li>
           <li className='hidden md:block'>
@@ -88,11 +88,11 @@ const NavBar = () => {
           </li>
           <li className='w-full border-t-2 p-2'>
             <Link
-              href='#about'
+              href='#portfolio'
               onClick={() => setToggleMobileNav(false)}
               className='link-underline link-underline-black'
             >
-              About
+              Portfolio
             </Link>
           </li>
           <li className='w-full border-t-2 p-2'>
@@ -106,11 +106,11 @@ const NavBar = () => {
           </li>
           <li className='w-full border-t-2 p-2'>
             <Link
-              href='#portfolio'
+              href='#about'
               onClick={() => setToggleMobileNav(false)}
               className='link-underline link-underline-black'
             >
-              Portfolio
+              About
             </Link>
           </li>
           <li className='w-full border-t-2 p-2'>

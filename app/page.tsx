@@ -10,6 +10,8 @@ export default function Home() {
   return (
     <main>
       <Homepage />
+      <Portfolio />
+      <Skills />
       <div className='lg:flex justify-evenly items-stretch'>
         <About />
         <div className='lg:w-1/2 xl:w-3/4'>
@@ -22,8 +24,6 @@ export default function Home() {
           />
         </div>
       </div>
-      <Skills />
-      <Portfolio />
       <Contact />
     </main>
   );

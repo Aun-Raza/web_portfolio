@@ -17,9 +17,9 @@ const About = () => {
             <ArrowIcon className='inline fill-blue-900 -rotate-180 md:hidden' />
           </h2>
           <p className='sm:text-left'>
-            Beside programming, I love to read a lot of self-help books 📚
+            Besides programming, I love to read a lot of self-help books 📚
             because it gives me a stronger understanding about the world and
-            productivity. I also enjoy playing video games and running on the
+            productivity. I also enjoy playing video games and running on
             occasion. 🕹️🏃‍♂️
           </p>
           <br />

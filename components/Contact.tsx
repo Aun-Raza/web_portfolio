@@ -10,7 +10,7 @@ const Contact = () => {
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
   });
   return (
-    <section id='contact' className=' bg-white '>
+    <section id='contact'>
       <div className='container px-0 md:px-3 mx-auto py-2 md:py-24'>
         <h2 className='heading-2 center md:w-full '>
           <ArrowIcon className='inline fill-blue-900' />
