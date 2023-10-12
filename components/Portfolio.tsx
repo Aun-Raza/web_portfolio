@@ -6,14 +6,13 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Divider,
   Link,
   Button,
 } from '@nextui-org/react';
 
 import Image from 'next/image';
-import { GitHubIcon, LiveIcon, YouTubeIcon } from '@public/assets/social';
+import { LiveIcon } from '@public/assets/social';
 
 const Portfolio = () => {
   type projectType = {
@@ -95,11 +94,9 @@ const Portfolio = () => {
 
   function getTechnologyStack(id: number, technologies: string[]) {
     return (
-      <div className='flex justify-center sm:justify-start flex-wrap'>
+      <div className='text-sm md:text-md xl:text-lg flex justify-start gap-3 flex-wrap'>
         {technologies.map((tech) => (
-          <div key={tech + id} className='font-sans btn cursor-pointer'>
-            {tech}
-          </div>
+          <div key={tech + id}>{tech}</div>
         ))}
       </div>
     );
@@ -138,6 +135,7 @@ const Portfolio = () => {
                     </Link>
                   </div>
                 </CardHeader>
+                <Divider className='sm:hidden' />
                 <CardBody className='flex flex-col sm:flex-row sm:gap-5'>
                   <div className='w-fit flex flex-col'>
                     <CardHeader className='gap-3 w-fit hidden sm:flex px-0 py-2'>
@@ -155,49 +153,40 @@ const Portfolio = () => {
                         </Link>
                       </div>
                     </CardHeader>
-                    <p className='h-auto mb-2 sm:mb-0 sm:h-40 2xl:text-xl sm:pt-3 sm:px-1'>
-                      {desc}
-                    </p>
-                    <h3 className='text-center sm:px-1 sm:text-left text-lg'>
-                      Libraries / Technologies
-                    </h3>
-                    {getTechnologyStack(id, technology)}
-                    <div className='text-sm grow lg:flex flex-col justify-center hidden'>
-                      <h3 className='text-lg px-1'>Demo Account</h3>
-                      <div className='px-2'>
-                        <p>username: john</p>
-                        <p>password: demo</p>
+                    <div className='sm:pt-3 sm:px-1 grow flex flex-col'>
+                      <h3 className='mb-2 font-semibold'>Description</h3>
+                      <p className='h-auto mb-2 sm:mb-0  2xl:text-xl'>{desc}</p>
+                      <h3 className='font-semibold mt-3 xl:mt-9'>Skills</h3>
+                      {getTechnologyStack(id, technology)}
+                      <div className='grow flex justify-center sm:justify-start items-end gap-3 h-full mt-4'>
+                        <Button
+                          as={Link}
+                          isExternal={true}
+                          href={github}
+                          className='bg-black fill-white text-white'
+                        >
+                          <LiveIcon />
+                          Github
+                        </Button>
+                        <Button
+                          as={Link}
+                          isExternal={true}
+                          href={demo}
+                          color='danger'
+                        >
+                          <LiveIcon className='fill-white' />
+                          Youtube Demo
+                        </Button>
+                        <Button
+                          as={Link}
+                          isExternal={true}
+                          href={demo}
+                          color='secondary'
+                        >
+                          <LiveIcon className='fill-white' />
+                          Live
+                        </Button>
                       </div>
-                    </div>
-                    <div className='grow sm:flex items-end gap-3 hidden'>
-                      <Button
-                        as={Link}
-                        isExternal={true}
-                        href={github}
-                        className='bg-black text-white'
-                      >
-                        <GitHubIcon />
-                        Github
-                      </Button>
-                      <Button
-                        as={Link}
-                        isExternal={true}
-                        href={demo}
-                        color='danger'
-                        variant='bordered'
-                      >
-                        <YouTubeIcon className='text-xl' />
-                        Youtube Demo
-                      </Button>
-                      <Button
-                        as={Link}
-                        isExternal={true}
-                        href={demo}
-                        color='secondary'
-                      >
-                        <LiveIcon className='fill-white' />
-                        Live
-                      </Button>
                     </div>
                   </div>
                   <Link isExternal href={demo}>
@@ -210,38 +199,6 @@ const Portfolio = () => {
                     />
                   </Link>
                 </CardBody>
-                <CardFooter>
-                  <div className='grow flex items-end justify-center gap-3 sm:hidden'>
-                    <Button
-                      as={Link}
-                      isExternal={true}
-                      href={github}
-                      className='bg-black text-white'
-                    >
-                      <GitHubIcon />
-                      Github
-                    </Button>
-                    <Button
-                      as={Link}
-                      isExternal={true}
-                      href={demo}
-                      color='danger'
-                      variant='bordered'
-                    >
-                      <YouTubeIcon className='text-xl' />
-                      Youtube Demo
-                    </Button>
-                    <Button
-                      as={Link}
-                      isExternal={true}
-                      href={demo}
-                      color='secondary'
-                    >
-                      <LiveIcon className='fill-white' />
-                      Live
-                    </Button>
-                  </div>
-                </CardFooter>
               </Card>
             )
           )}
