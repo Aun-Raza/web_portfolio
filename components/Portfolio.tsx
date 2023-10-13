@@ -20,7 +20,7 @@ const Portfolio = () => {
     title: string;
     technology: string[];
     file: { name: string; logo: string };
-    links: { github: string; demo: string };
+    links: { github: string; demo: string; video: string };
     desc: string;
   };
 
@@ -44,6 +44,7 @@ const Portfolio = () => {
       links: {
         github: 'https://github.com/Aun-Raza/PixelHabitTracker',
         demo: 'https://pixeltracker-7vq3.onrender.com',
+        video: 'https://www.youtube.com/watch?v=o8DIh0qejXY',
       },
       desc: 'This is an everyday habit tracking app to encourage users to keep track of their habits and extend their habit streaks through a rewarding system. Everyday the user must check that they have completed their habits, so they can continue to transform their productivity.',
     },
@@ -66,6 +67,7 @@ const Portfolio = () => {
       links: {
         github: 'https://github.com/Aun-Raza/Geo-Quiz',
         demo: 'https://js-quiz-q607.onrender.com',
+        video: 'https://www.youtube.com/watch?v=emlL-SYnnXk',
       },
       desc: 'This is a quiz platform designed for JavaScript developers. Users are encouraged to complete various quizzes to prepare themselves for technical interviews of their choosing. CRUD operations are built-in to the app, but can only be used by authenticated/authorized users.',
     },
@@ -87,6 +89,7 @@ const Portfolio = () => {
       links: {
         github: 'https://github.com/Aun-Raza/notedev',
         demo: 'https://notedev-hazel.vercel.app',
+        video: 'https://www.youtube.com/watch?v=S6baRTcF-pI',
       },
       desc: 'This is a versatile note management app built for software enthusiasts and developers to keep all of their notes in one centralized repository. The app uses the Debounce Design Pattern for updating the notes to improve efficiency.',
     },
@@ -117,7 +120,7 @@ const Portfolio = () => {
               file,
               technology,
               desc,
-              links: { github, demo },
+              links: { github, demo, video },
             }) => (
               <Card key={id} className='-z-0'>
                 <CardHeader className='flex gap-3 sm:hidden'>
@@ -171,7 +174,7 @@ const Portfolio = () => {
                         <Button
                           as={Link}
                           isExternal={true}
-                          href={demo}
+                          href={video}
                           color='danger'
                         >
                           <LiveIcon className='fill-white' />
