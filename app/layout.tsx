@@ -8,9 +8,9 @@ import { Providers } from './providers';
 const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Aun Raza | Full-Stack MERN Developer',
+  title: 'Aun Raza | Full-Stack Developer',
   description:
-    "Aun Raza's portfolio showcase his unique personality, technical skills, and finished projects (not school-related) to employers and viewers. Always feel free to contact Aun for any discussion about coding or life in general.",
+    "Aun Raza's portfolio website showcase his unique personality, technical skills, and finished projects to employers and viewers of very kind.",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
       <head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/assets/computer-icon.png' sizes='any' />
+        <link rel='icon' href='/assets/favicon.png' sizes='any' />
       </head>
       <body className={outfit.className}>
         <Providers>

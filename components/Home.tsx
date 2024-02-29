@@ -16,7 +16,7 @@ const Home = () => {
     >
       <div className='w-2/3 mx-auto'>
         <p className='text-3xl sm:text-5xl lg:text-7xl text-center sm:text-left'>
-          Hello 👋
+          Hello
           <br />
           <span className='text-5xl sm:text-7xl lg:text-8xl'>
             I&apos;m{' '}
@@ -25,15 +25,31 @@ const Home = () => {
             </span>
           </span>
           <br />A{' '}
-          <span className='font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400'>
-            FULL-STACK MERN
+          <span className='font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-red-600'>
+            FULL-STACK
+            <br />
           </span>{' '}
-          Developer 🧑‍💻
+          Developer
         </p>
-        <ul className='flex flex-wrap leading-4 justify-center items-center sm:justify-start gap-5 md:gap-8 ps-3 list-disc w-fit text-xl md:text-2xl mt-1 mb-4'>
-          <li>Enthusiastic</li>
-          <li>Committed</li>
-          <li>Hardworking</li>
+        <ul className='flex flex-wrap leading-4 justify-center items-center sm:justify-start gap-5 md:gap-8 ps-3 list-disc w-fit text-xl md:text-2xl mt-3 mb-4'>
+          <li className='list-none'>
+            <span className='underline font-bold text-transparent bg-clip-text bg-gradient-to-l from-blue-700 to-blue-500'>
+              A
+            </span>
+            mbitious
+          </li>
+          <li>
+            <span className='underline font-bold text-transparent bg-clip-text bg-gradient-to-l from-purple-700 to-purple-500'>
+              U
+            </span>
+            nique
+          </li>
+          <li>
+            <span className='underline font-bold text-transparent bg-clip-text bg-gradient-to-l from-red-700 to-red-500'>
+              N
+            </span>
+            atural
+          </li>
         </ul>
         <div className='w-min sm:w-full mx-auto'>
           <SocialNav />
@@ -44,7 +60,7 @@ const Home = () => {
           </Link>
           <Link href='#portfolio'>
             <button className=' btn font-mono'>
-              &#x2192; View my portfolio
+              &#x2192; View my projects
             </button>
           </Link>
         </div>
@@ -52,7 +68,7 @@ const Home = () => {
       <div className='md:w-1/3'>
         <div className='mt-3 mx-auto w-fit h-'>
           <Image
-            className='rounded-md w-unit-8xl'
+            className='rounded-3xl w-unit-8xl'
             src='/aunraza_portrait.png'
             width={433}
             height={577}

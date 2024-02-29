@@ -1,94 +1,75 @@
 import React from 'react';
-import {
-  HTML,
-  CSS,
-  JavaScript,
-  React as ReactIcon,
-  NextJS,
-  TypeScript,
-  Jest,
-  DB,
-  GraphQL,
-  EsLint,
-  Express,
-  MySql,
-  Node,
-  Redux,
-} from '@public/assets/skills/index';
-import { Oxanium } from 'next/font/google';
-const oxanium = Oxanium({ subsets: ['latin'] });
 import { Arrow as ArrowIcon } from '@public/assets/index';
 
 const Skills = () => {
+  const items = [
+    [
+      { id: 1, label: 'HTML' },
+      { id: 2, label: 'CSS' },
+      { id: 3, label: 'JavaScript' },
+    ],
+  ];
   return (
-    <section id='skills' className='py-24 2xl:py-52 flex-grow'>
+    <section
+      id='skills'
+      className='py-24 2xl:py-52 flex-grow h-fit sm:h-screen'
+    >
       <div className='container mx-auto'>
         <h2 className='heading-2 center'>
-          <ArrowIcon className='inline fill-blue-900' /> Technical Skills{' '}
+          <ArrowIcon className='inline fill-blue-900' /> Skills
           <ArrowIcon className='inline fill-blue-900 rotate-180' />
         </h2>
-        <div
-          className={
-            'flex flex-wrap 2xl:w-1/2 mx-auto justify-center gap-2 ' +
-            oxanium.className
-          }
-        >
-          <div className='skill_item'>
-            <HTML className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>HTML5</h3>
-          </div>
-          <div className='skill_item'>
-            <CSS className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>CSS3</h3>
-          </div>
-          <div className='skill_item'>
-            <JavaScript className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>ES6</h3>
-          </div>
-          <div className='skill_item'>
-            <Node className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>Node</h3>
-          </div>
-          <div className='skill_item'>
-            <Express className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>Express</h3>
-          </div>
-          <div className='skill_item'>
-            <ReactIcon className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>React</h3>
-          </div>
-          <div className='skill_item'>
-            <GraphQL className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>GraphQL</h3>
-          </div>
-          <div className='skill_item'>
-            <Redux className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>Redux</h3>
-          </div>
-          <div className='skill_item'>
-            <NextJS className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>NextJS</h3>
-          </div>
 
-          <div className='skill_item'>
-            <DB className='text-4xl fill-green-400' />
-            <h3 className='text-2xl font-semibold'>MongoDB</h3>
-          </div>
-          <div className='skill_item'>
-            <MySql className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>MySQL</h3>
-          </div>
-          <div className='skill_item'>
-            <TypeScript className='text-4xl fill-blue-500' />
-            <h3 className='text-2xl font-semibold'>TS</h3>
-          </div>
-          <div className='skill_item'>
-            <EsLint className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>ESLint</h3>
-          </div>
-          <div className='skill_item'>
-            <Jest className='text-4xl' />
-            <h3 className='text-2xl font-semibold'>Jest</h3>
+        <div className='flex p-3 border'>
+          <aside id='default-sidebar' aria-label='Sidebar' className='w-1/4'>
+            <div className='h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800'>
+              <ul className='space-y-2 font-medium'>
+                <li className='skill-nav-selector group'>
+                  <svg
+                    className='w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'
+                    aria-hidden='true'
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='currentColor'
+                    viewBox='0 0 22 21'
+                  >
+                    <path d='M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z' />
+                    <path d='M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z' />
+                  </svg>
+                  <span className='ms-3'>Frontend</span>
+                </li>
+                <li className='skill-nav-selector group'>
+                  <svg
+                    className='flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'
+                    aria-hidden='true'
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='currentColor'
+                    viewBox='0 0 18 18'
+                  >
+                    <path d='M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z' />
+                  </svg>
+                  <span className='flex-1 ms-3 whitespace-nowrap'>Backend</span>
+                </li>
+                <li className='skill-nav-selector group'>
+                  <svg
+                    className='flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'
+                    aria-hidden='true'
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                  >
+                    <path d='m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z' />
+                  </svg>
+                  <span className='flex-1 ms-3 whitespace-nowrap'>Cloud</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <div className='border grow flex flex-wrap'>
+            {items[0].map((item) => (
+              <div key={item.id} className='p-3 w-28 border h-fit flex gap-2'>
+                {item.label}
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import SocialNav from './SocialNav';
-import { InfoIcon } from '@public/assets/social/index';
 import { Arrow as ArrowIcon } from '@public/assets/index';
 import Link from 'next/link';
+import AboutDetail from './AboutDetail';
 
 const About = () => {
   return (
@@ -11,69 +11,45 @@ const About = () => {
       className='bg-white w-full lg:w-1/2 flex-grow text-center 2xl:py-36'
     >
       <div className='text-inherit sm:text-xl'>
+        <h2 className='heading-2 center'>
+          <ArrowIcon className='inline fill-blue-900' /> Mindset{' '}
+          <ArrowIcon className='inline fill-blue-900 -rotate-180 md:hidden' />
+        </h2>
         <div className='w-4/5 mx-auto'>
-          <h2 className='heading-2 center'>
-            <ArrowIcon className='inline fill-blue-900' /> About Me{' '}
-            <ArrowIcon className='inline fill-blue-900 -rotate-180 md:hidden' />
-          </h2>
           <p className='sm:text-left'>
-            Besides programming, I love to read a lot of self-help books 📚
-            because it gives me a stronger understanding about the world and
-            productivity. I also enjoy playing video games and running on
-            occasion. 🕹️🏃‍♂️
+            I believe that colleges and universities, in general, struggle to
+            keep up with the rapid changes and modernization of technology.
+            However, at the end of the day, what matters most for success in
+            your career is your drive and character. I&apos;ve noticed that many
+            young developers are giving up because the market is a complete
+            mess, but with that attitude, you won&apos;t get anywhere positive
+            in life. The best we can do, with all the spare time we have, is to
+            continuously learn and build amazing and interesting projects for
+            everyone to see.
           </p>
-          <br />
-          <p className='sm:text-left'>
-            Here are the books that impacted my life:
+          <p className='sm:text-left mt-8'>
+            Here are some of the books that impacted my life positively:
           </p>
-          <ul className='text-left my-4 leading-9'>
-            <li className='sm:ms-12'>⭐ Atomic Habits</li>
-            <li className='sm:ms-12'>
-              ⭐ How to Win Friends and Influence People
+          <ul className='text-left my-4 leading-9 list-disc'>
+            <li className='sm:ms-5'>
+              Atomic Habits <span className='font-bold'>(James Clear)</span>
             </li>
-            <li className='sm:ms-12'>
-              ⭐ Soft Skills: The Software Developer&apos;s Life Manual
+            <li className='sm:ms-5'>
+              Deep Work <span className='font-bold'>(Cal Newport)</span>
             </li>
-            <li className='sm:ms-12'>
-              ⭐ How I Found Freedom in an Unfree World
+            <li className='sm:ms-5'>
+              Mastery <span className='font-bold'>(Robert Greene)</span>
             </li>
-            <li className='sm:ms-12'> ⭐ George Orwell 1984</li>
+            <li className='sm:ms-5'>
+              System Design Interview{' '}
+              <span className='font-bold'>(Alex Xu)</span>
+            </li>
+            <li className='sm:ms-5'>
+              The Pragmatic Programmer{' '}
+              <span className='font-bold'>(Andy Hunt, Dave Thomas)</span>
+            </li>
           </ul>
-        </div>
-        <div className='w-fit mt-10 sm:w-4/5 mx-auto'>
-          <div>
-            <div className='mt-5 px-3 flex gap-2 md:gap-16 border-b pb-4 border-slate-900 text-left w-fit'>
-              <div className='info-block'>
-                <div className='info'>
-                  <h3>Name</h3>
-                  <p>Aun Raza</p>
-                </div>
-                <div className='info'>
-                  <h3>Email</h3>
-                  <p className='break-words'>aunrazaq123@gmail.com</p>
-                </div>
-              </div>
-              <div className='info-block'>
-                <div className='info'>
-                  <h3>Education</h3>
-                  <p>Software Engineering</p>
-                </div>
-                <div className='info'>
-                  <h3>Employment</h3>
-                  <p>Open</p>
-                </div>
-              </div>
-            </div>
-            <div className='flex items-center justify-center sm:justify-start md:gap-3'>
-              <Link target='_blank' href='/AunRaza-Resume-2023.pdf'>
-                <button className='btn svg hover:text-blue-400'>
-                  <InfoIcon />
-                  <span className='hidden sm:block'>Resume</span>
-                </button>
-              </Link>
-              <SocialNav />
-            </div>
-          </div>
+          <SocialNav />
         </div>
       </div>
     </section>

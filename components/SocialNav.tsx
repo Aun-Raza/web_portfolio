@@ -1,25 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  YouTubeIcon,
   GitHubIcon,
-  TwitterIcon,
   LinkedInIcon,
-  InstagramIcon,
+  ProfileIcon,
 } from '@public/assets/social/index';
 
 const SocialNav = () => {
   return (
     <nav>
-      <ul className='social-icons flex gap-3'>
+      <ul className='flex gap-3'>
         <li>
           <Link target='_blank' href='https://github.com/Aun-Raza'>
             <GitHubIcon className='svg' />
-          </Link>
-        </li>
-        <li>
-          <Link target='_blank' href='https://www.instagram.com/aunraza_2'>
-            <InstagramIcon className='svg' />
           </Link>
         </li>
         <li>
@@ -28,17 +21,8 @@ const SocialNav = () => {
           </Link>
         </li>
         <li>
-          <Link target='_blank' href='https://twitter.com/AunRaza1523417'>
-            <TwitterIcon className='svg' />
-          </Link>
-        </li>
-        <li>
-          <Link
-            target='_blank'
-            href='https://www.youtube.com/@aunraza3678'
-            className='text-lg'
-          >
-            <YouTubeIcon className='svg' />
+          <Link target='_blank' href='/AunRaza-Resume-2024.pdf'>
+            <ProfileIcon className='svg' />
           </Link>
         </li>
       </ul>

@@ -28,7 +28,7 @@ const NavBar = () => {
             >
               {' '}
               <Portfolio />
-              Portfolio
+              Projects
             </Link>
           </li>
           <li className='hidden md:block'>
@@ -46,7 +46,7 @@ const NavBar = () => {
               className='hover:fill-blue-400 hover:text-blue-400 link-underline link-underline-black flex gap-2 items-center'
             >
               <About />
-              About
+              Mindset
             </Link>
           </li>
           <li className='hidden md:block'>
