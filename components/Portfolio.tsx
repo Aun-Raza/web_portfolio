@@ -12,7 +12,7 @@ import {
 } from '@nextui-org/react';
 
 import Image from 'next/image';
-import { LiveIcon } from '@public/assets/social';
+import { GitHubIcon, LiveIcon } from '@public/assets/social';
 
 const Portfolio = () => {
   type projectType = {
@@ -20,33 +20,33 @@ const Portfolio = () => {
     title: string;
     technology: string[];
     file: { name: string; logo: string };
-    links: { github: string; demo: string; video: string };
+    links: { github: string; demo: string };
     desc: string;
   };
 
   const projects: projectType[] = [
     {
-      id: 1,
-      title: 'Pixel Tracker',
+      id: 3,
+      title: 'NextGenVault',
       technology: [
         'React',
-        'Node',
-        'GraphQL',
-        'Redux',
-        'Mongoose',
-        'DayJS',
-        'ChartJS',
+        'TypeScript',
+        'Spring Boot',
+        'Hibernate',
+        'MySQL',
+        'AWS',
+        'S3',
+        'EBS',
       ],
       file: {
-        name: 'habit_tracker.png',
-        logo: 'square.png',
+        name: 'nextgenvault.png',
+        logo: 'note_icon.svg',
       },
       links: {
-        github: 'https://github.com/Aun-Raza/PixelHabitTracker',
-        demo: 'https://pixeltracker-7vq3.onrender.com',
-        video: 'https://www.youtube.com/watch?v=o8DIh0qejXY',
+        github: 'https://github.com/Aun-Raza/ecommerce',
+        demo: 'http://nextgenvault.s3-website.ca-central-1.amazonaws.com/',
       },
-      desc: 'This is an everyday habit tracking app to encourage users to keep track of their habits and extend their habit streaks through a rewarding system. Everyday the user must check that they have completed their habits, so they can continue to transform their productivity.',
+      desc: 'An innovative e-commerce platform specializing in advanced tech gadgets, including movable desks, futuristic devices, and robot dogs. Serves as a centralized hub for enthusiasts to discover and purchase high-end, niche tech gadgets not commonly found in the market.',
     },
     {
       id: 2,
@@ -67,31 +67,30 @@ const Portfolio = () => {
       links: {
         github: 'https://github.com/Aun-Raza/Geo-Quiz',
         demo: 'https://js-quiz-q607.onrender.com',
-        video: 'https://www.youtube.com/watch?v=emlL-SYnnXk',
       },
-      desc: 'This is a quiz platform designed for JavaScript developers. Users are encouraged to complete various quizzes to prepare themselves for technical interviews of their choosing. CRUD operations are built-in to the app, but can only be used by authenticated/authorized users.',
+      desc: 'An interactive quiz application designed to test and enhance users’ JavaScript knowledge, featuring Multiple-Choice and True-False questions. JS-Quiz stands as a testament to the effective application of the MERN stack in creating engaging educational tools.',
     },
     {
-      id: 3,
-      title: 'NoteDev',
+      id: 1,
+      title: 'Pixel Tracker',
       technology: [
-        'NextTS',
         'React',
-        'Prisma',
-        'TypeScript',
-        'NextUI',
-        'Font-Awesome',
+        'Node',
+        'GraphQL',
+        'Redux',
+        'Mongoose',
+        'DayJS',
+        'ChartJS',
       ],
       file: {
-        name: 'notedev.png',
-        logo: 'note_icon.svg',
+        name: 'habit_tracker.png',
+        logo: 'square.png',
       },
       links: {
-        github: 'https://github.com/Aun-Raza/notedev',
-        demo: 'https://notedev-hazel.vercel.app',
-        video: 'https://www.youtube.com/watch?v=S6baRTcF-pI',
+        github: 'https://github.com/Aun-Raza/PixelHabitTracker',
+        demo: 'https://pixeltracker-7vq3.onrender.com',
       },
-      desc: 'This is a versatile note management app built for software enthusiasts and developers to keep all of their notes in one centralized repository. The app uses the Debounce Design Pattern for updating the notes to improve efficiency.',
+      desc: 'An alternative, gamified everyday habit tracking application utilizing the GraphQL stack. Enhances daily habit formation through an engaging, user-friendly interface and a rewarding points system.',
     },
   ];
 
@@ -109,19 +108,15 @@ const Portfolio = () => {
     <div className='bg-white'>
       <section id='portfolio' className='container mx-auto md:py-24'>
         <h2 className='heading-2 center'>
-          <ArrowIcon className='inline fill-blue-900' /> Portfolio{' '}
+          <ArrowIcon className='inline fill-blue-900' /> Projects
           <ArrowIcon className='inline fill-blue-900 rotate-180' />
         </h2>
         <div className='w-full flex flex-col gap-3 sm:gap-10 font-sans'>
           {projects.map(
-            ({
-              id,
-              title,
-              file,
-              technology,
-              desc,
-              links: { github, demo, video },
-            }) => (
+            (
+              { id, title, file, technology, desc, links: { github, demo } },
+              index
+            ) => (
               <Card key={id} className='-z-0'>
                 <CardHeader className='flex gap-3 sm:hidden'>
                   <Image
@@ -139,7 +134,11 @@ const Portfolio = () => {
                   </div>
                 </CardHeader>
                 <Divider className='sm:hidden' />
-                <CardBody className='flex flex-col sm:flex-row sm:gap-5'>
+                <CardBody
+                  className={`flex flex-col sm:flex-row sm:gap-5 ${
+                    index % 2 === 1 ? 'sm:flex-row-reverse' : ''
+                  }`}
+                >
                   <div className='w-fit flex flex-col'>
                     <CardHeader className='gap-3 w-fit hidden sm:flex px-0 py-2'>
                       <Image
@@ -166,20 +165,12 @@ const Portfolio = () => {
                           as={Link}
                           isExternal={true}
                           href={github}
-                          className='bg-black fill-white text-white'
+                          variant='flat'
                         >
-                          <LiveIcon />
+                          <GitHubIcon />
                           Github
                         </Button>
-                        <Button
-                          as={Link}
-                          isExternal={true}
-                          href={video}
-                          color='danger'
-                        >
-                          <LiveIcon className='fill-white' />
-                          Youtube Demo
-                        </Button>
+
                         <Button
                           as={Link}
                           isExternal={true}
