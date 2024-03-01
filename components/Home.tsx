@@ -27,11 +27,10 @@ const Home = () => {
           <br />A{' '}
           <span className='font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-red-600'>
             FULL-STACK
-            <br />
-          </span>{' '}
-          Developer
+            <br /> Developer
+          </span>
         </p>
-        <ul className='flex flex-wrap leading-4 justify-center items-center sm:justify-start gap-5 md:gap-8 ps-3 list-disc w-fit text-xl md:text-2xl mt-3 mb-4'>
+        <ul className='flex flex-wrap w-full leading-4 justify-center items-center sm:justify-start gap-5 md:gap-8 ps-3 list-disc w-fit text-xl md:text-2xl mt-3 mb-4'>
           <li className='list-none'>
             <span className='underline font-bold text-transparent bg-clip-text bg-gradient-to-l from-blue-700 to-blue-500'>
               A

@@ -37,7 +37,7 @@ const NavBar = () => {
               className='hover:fill-blue-400 hover:text-blue-400 link-underline link-underline-black flex gap-2 items-center'
             >
               <Skill />
-              Skills
+              Skill
             </Link>
           </li>
           <li className='hidden md:block'>
