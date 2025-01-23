@@ -40,7 +40,7 @@ const Portfolio = () => {
       ],
       file: {
         name: 'nextgenvault.png',
-        logo: 'note_icon.svg',
+        logo: 'vault.svg',
       },
       links: {
         github: 'https://github.com/Aun-Raza/ecommerce',
@@ -114,7 +114,7 @@ const Portfolio = () => {
         <div className='w-full flex flex-col gap-3 sm:gap-10 font-sans'>
           {projects.map(
             (
-              { id, title, file, technology, desc, links: { github, demo } },
+              { id, title, file, technology, desc, links: { github } },
               index
             ) => (
               <Card key={id} className='-z-0'>
@@ -128,9 +128,6 @@ const Portfolio = () => {
                   />
                   <div className='flex flex-col'>
                     <p className='text-md'>{title}</p>
-                    <Link isExternal href={demo}>
-                      <p className='text-small text-default-500'>{demo}</p>
-                    </Link>
                   </div>
                 </CardHeader>
                 <Divider className='sm:hidden' />
@@ -150,9 +147,6 @@ const Portfolio = () => {
                       />
                       <div className='flex flex-col'>
                         <p>{title}</p>
-                        <Link isExternal href={demo}>
-                          <p className='text-small text-default-500'>{demo}</p>
-                        </Link>
                       </div>
                     </CardHeader>
                     <div className='sm:pt-3 sm:px-1 grow flex flex-col'>
@@ -170,20 +164,10 @@ const Portfolio = () => {
                           <GitHubIcon />
                           Github
                         </Button>
-
-                        <Button
-                          as={Link}
-                          isExternal={true}
-                          href={demo}
-                          color='secondary'
-                        >
-                          <LiveIcon className='fill-white' />
-                          Live
-                        </Button>
                       </div>
                     </div>
                   </div>
-                  <Link isExternal href={demo}>
+                  <Link>
                     <Image
                       src={`/assets/projects/${file.name}`}
                       width={1920}

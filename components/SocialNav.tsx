@@ -21,7 +21,10 @@ const SocialNav = () => {
           </Link>
         </li>
         <li>
-          <Link target='_blank' href='/AunRaza-Resume-2024.pdf'>
+          <Link
+            target='_blank'
+            href='https://drive.google.com/file/d/13SiPsWVNAo4xjqIJOrKhU3bzNuFG4Pxh/view?usp=sharing'
+          >
             <ProfileIcon className='svg' />
           </Link>
         </li>
