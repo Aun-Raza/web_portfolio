@@ -23,7 +23,7 @@ const SocialNav = () => {
         <li>
           <Link
             target='_blank'
-            href='https://drive.google.com/file/d/13SiPsWVNAo4xjqIJOrKhU3bzNuFG4Pxh/view?usp=sharing'
+            href='https://drive.google.com/file/d/13k8tsHjDS7aLRVQRm3d7PgOxFeu_Xu-E/view?usp=sharing'
           >
             <ProfileIcon className='svg' />
           </Link>
